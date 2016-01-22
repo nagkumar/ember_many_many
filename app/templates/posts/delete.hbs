@@ -1,0 +1,8 @@
+{{link-to "Posts" "posts.index"}}
+
+{{#posts-show post=model as |post|}}
+    <button {{action "destroy" post}}>
+        Delete
+    </button>
+    {{outlet}}
+{{/posts-show}}
