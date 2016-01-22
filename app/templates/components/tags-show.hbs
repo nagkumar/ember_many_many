@@ -1,0 +1,21 @@
+{{#if shouldExpand}}
+    <article>
+        <h3>
+          {{#if shouldLink}}
+            {{link-to tag.name "tags.show" tag}}
+          {{else}}
+            {{tag.name}}
+          {{/if}}
+        </h3>
+
+      {{yield tag}}
+    </article>
+{{else}}
+    <ol>
+      {{#if shouldLink}}
+        {{link-to tag.name "tags.show" tag}}
+      {{else}}
+        {{tag.name}}
+      {{/if}}
+    </ol>
+{{/if}}
