@@ -14,8 +14,10 @@ export default Ember.Route.extend({
     //console.log(CircularJSON.stringify(model));
     //console.log(CircularJSON.stringify(model.get('isDirty')));
     model.forEach(function (x) {
-      Ember.Logger.info(model);
-      console.log(x.toJSON());
+      var abc = x.get("tags");
+      abc.map(function (x) {
+        console.log(x.toJSON());
+      });
     });
 
     //model.map(function (x) {
